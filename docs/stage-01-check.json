@@ -1,0 +1,13 @@
+{
+  "stage": 1,
+  "layout": {
+    "width": 1200,
+    "height": 630,
+    "titleWithinCanvas": true,
+    "textAboveFooter": true,
+    "wordCount": 14
+  },
+  "bytes": 50232,
+  "browserErrors": [],
+  "note": "Only the cover and plan exist; website functionality is not implemented or tested."
+}

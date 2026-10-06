@@ -1,0 +1,35 @@
+{
+  "stage": 2,
+  "layout": {
+    "width": 1200,
+    "height": 630,
+    "contentInside": true,
+    "wordCount": 14
+  },
+  "bytes": 50232,
+  "originalDraftUnchanged": true,
+  "originalSha256": "6a66aa4f7bd6ac47cbca36c74e3a8ab18a574b9643725b371d9c7ce875f5cde5",
+  "previews": [
+    {
+      "width": 1440,
+      "noOverflow": true,
+      "imagesLoaded": true,
+      "headings": 1
+    },
+    {
+      "width": 375,
+      "noOverflow": true,
+      "imagesLoaded": true,
+      "headings": 1
+    },
+    {
+      "width": 320,
+      "noOverflow": true,
+      "imagesLoaded": true,
+      "headings": 1
+    }
+  ],
+  "browserErrors": [],
+  "gitDirectoryExists": false,
+  "scope": "Initial cover only; no website pages, functionality, commit or upload."
+}
