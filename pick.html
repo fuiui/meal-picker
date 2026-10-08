@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- UTF-8 支持中文和货币符号；viewport 让手机使用实际屏幕宽度。 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Choose a budget and taste to find a meal idea. The recommendation feature is coming soon.">
+  <title>Pick a Meal | What to Eat</title>
+</head>
+<body>
+  <a href="#main-content">Skip to main content</a>
+
+  <header>
+    <p><strong>What to Eat</strong> — A little help with lunch.</p>
+    <!-- 只有已存在的页面才使用链接，其他三页在第五部分补齐。 -->
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><span>Home (coming soon)</span></li>
+        <li><a href="pick.html" aria-current="page">Pick a Meal</a></li>
+        <li><span>Meal Collection (coming soon)</span></li>
+        <li><span>About (coming soon)</span></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <h1>Pick a Meal</h1>
+    <p>One less decision. Start with your budget and taste.</p>
+    <p id="prototype-note"><strong>Coming soon:</strong> You can try the choices below. Meal recommendations are not available yet.</p>
+
+    <!-- form 收集选择；label 的 for 对应控件 id，点击标签也能聚焦。 -->
+    <form id="meal-form" aria-describedby="prototype-note price-note">
+      <fieldset>
+        <legend>Your preferences</legend>
+        <p>
+          <label for="budget">Budget per meal</label><br>
+          <select id="budget" name="budget" aria-describedby="budget-help">
+            <option value="any" selected>Any budget</option>
+            <option value="15">Up to ¥15</option>
+            <option value="25">Up to ¥25</option>
+          </select>
+        </p>
+        <p id="budget-help">The selected limit includes meals at that exact price.</p>
+        <p>
+          <label for="taste">Taste preference</label><br>
+          <select id="taste" name="taste">
+            <option value="any" selected>Any taste</option>
+            <option value="non-spicy">Non-spicy</option>
+            <option value="spicy">Spicy</option>
+          </select>
+        </p>
+        <!-- 暂用 button 类型避免误提交；第四部分接入逻辑后再启用。 -->
+        <button id="pick-button" type="button" disabled aria-describedby="prototype-note">Pick a meal</button>
+      </fieldset>
+    </form>
+
+    <section aria-labelledby="result-heading">
+      <h2 id="result-heading">Your meal suggestion</h2>
+      <!-- 第四部分在此更新结果；aria-live 让辅助阅读工具获知变化。 -->
+      <div id="meal-result" aria-live="polite" aria-atomic="true">
+        <p>No meal has been selected. This area will show a matching meal once recommendations are ready.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="how-heading">
+      <h2 id="how-heading">How it will work</h2>
+      <ol>
+        <li>Choose your budget and taste.</li>
+        <li>Pick a meal from the matching options.</li>
+        <li>Try again if you would like another idea. Random choices may repeat.</li>
+      </ol>
+      <p id="price-note">Prices will be examples for this project, not current restaurant prices. This site will not place orders.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>What to Eat · A student web project.</p>
+  </footer>
+</body>
+</html>
