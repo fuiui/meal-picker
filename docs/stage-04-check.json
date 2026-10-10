@@ -1,0 +1,26 @@
+{
+  "stage": 4,
+  "mealCount": 12,
+  "filterCombinations": 9,
+  "allCandidatesReachable": true,
+  "emptyAndSingleCandidate": true,
+  "staleResultCleared": true,
+  "keyboardSubmit": true,
+  "refreshResets": true,
+  "noJavaScriptFallback": true,
+  "views": [
+    {
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "overflow": false
+    }
+  ],
+  "browserErrors": []
+}

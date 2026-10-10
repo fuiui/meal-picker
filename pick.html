@@ -4,7 +4,7 @@
   <!-- UTF-8 支持中文和货币符号；viewport 让手机使用实际屏幕宽度。 -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Choose a budget and taste to find a meal idea. The recommendation feature is coming soon.">
+  <meta name="description" content="Choose your budget and taste, then get a random suggestion from twelve example meals.">
   <title>Pick a Meal | What to Eat</title>
 </head>
 <body>
@@ -26,10 +26,11 @@
   <main id="main-content" tabindex="-1">
     <h1>Pick a Meal</h1>
     <p>One less decision. Start with your budget and taste.</p>
-    <p id="prototype-note"><strong>Coming soon:</strong> You can try the choices below. Meal recommendations are not available yet.</p>
+    <p>Choose your preferences, then pick a meal. Try again whenever you want another idea.</p>
+    <noscript><p>This meal picker needs JavaScript. Enable JavaScript to use the recommendation button.</p></noscript>
 
     <!-- form 收集选择；label 的 for 对应控件 id，点击标签也能聚焦。 -->
-    <form id="meal-form" aria-describedby="prototype-note price-note">
+    <form id="meal-form" aria-describedby="price-note">
       <fieldset>
         <legend>Your preferences</legend>
         <p>
@@ -49,32 +50,36 @@
             <option value="spicy">Spicy</option>
           </select>
         </p>
-        <!-- 暂用 button 类型避免误提交；第四部分接入逻辑后再启用。 -->
-        <button id="pick-button" type="button" disabled aria-describedby="prototype-note">Pick a meal</button>
+        <!-- 脚本初始化成功后才启用，避免 JavaScript 不可用时误提交。 -->
+        <button id="pick-button" type="submit" disabled>Pick a meal</button>
       </fieldset>
     </form>
 
     <section aria-labelledby="result-heading">
       <h2 id="result-heading">Your meal suggestion</h2>
-      <!-- 第四部分在此更新结果；aria-live 让辅助阅读工具获知变化。 -->
+      <p id="candidate-count" role="status"></p>
+      <!-- JavaScript 更新结果；aria-live 让辅助阅读工具获知变化。 -->
       <div id="meal-result" aria-live="polite" aria-atomic="true">
-        <p>No meal has been selected. This area will show a matching meal once recommendations are ready.</p>
+        <p>No meal selected. Enable JavaScript if the recommendation button remains unavailable.</p>
       </div>
     </section>
 
     <section aria-labelledby="how-heading">
-      <h2 id="how-heading">How it will work</h2>
+      <h2 id="how-heading">How it works</h2>
       <ol>
         <li>Choose your budget and taste.</li>
         <li>Pick a meal from the matching options.</li>
         <li>Try again if you would like another idea. Random choices may repeat.</li>
       </ol>
-      <p id="price-note">Prices will be examples for this project, not current restaurant prices. This site will not place orders.</p>
+      <p id="price-note">Prices are examples for this project, not current restaurant prices. Taste labels describe these example meals. This site does not place orders or save your choices.</p>
     </section>
   </main>
 
   <footer>
     <p>What to Eat · A student web project.</p>
   </footer>
+  <!-- 顺序很重要：先准备数据，再运行读取数据的推荐逻辑。 -->
+  <script src="meals.js"></script>
+  <script src="pick.js"></script>
 </body>
 </html>
