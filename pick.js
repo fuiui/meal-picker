@@ -39,15 +39,8 @@ form.addEventListener('submit', function (event) {
   // Math.random() 小于 1，向下取整后得到 0 到 length - 1 的下标。
   const index = Math.floor(Math.random() * candidates.length);
   const meal = candidates[index];
-  const card = document.createElement('article');
-  const name = document.createElement('h3');
-  const details = document.createElement('p');
-  const description = document.createElement('p');
-  name.textContent = meal.name;
-  details.textContent = 'Example price: ¥' + meal.price + ' · ' + (meal.taste === 'spicy' ? 'Spicy' : 'Non-spicy');
-  description.textContent = meal.description;
-  // textContent 把数据当文字显示，不把它当成 HTML 执行。
-  card.append(name, details, description);
+  // 结果区标题是 h2，所以每道菜用 h3；清单页复用函数但用 h2。
+  const card = createMealCard(meal, 'h3');
   result.replaceChildren(card);
   pickButton.textContent = 'Pick again';
 });

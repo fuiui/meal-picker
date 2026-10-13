@@ -6,19 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Choose your budget and taste, then get a random suggestion from twelve example meals.">
   <title>Pick a Meal | What to Eat</title>
+  <link rel="stylesheet" href="media.css">
 </head>
 <body>
   <a href="#main-content">Skip to main content</a>
 
   <header>
     <p><strong>What to Eat</strong> — A little help with lunch.</p>
-    <!-- 只有已存在的页面才使用链接，其他三页在第五部分补齐。 -->
+    <!-- 四个真实页面使用相对链接，移动整个文件夹后也能访问。 -->
     <nav aria-label="Main navigation">
       <ul>
-        <li><span>Home (coming soon)</span></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="pick.html" aria-current="page">Pick a Meal</a></li>
-        <li><span>Meal Collection (coming soon)</span></li>
-        <li><span>About (coming soon)</span></li>
+        <li><a href="meals.html">Meal Collection</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
   </header>
@@ -72,6 +73,7 @@
         <li>Try again if you would like another idea. Random choices may repeat.</li>
       </ol>
       <p id="price-note">Prices are examples for this project, not current restaurant prices. Taste labels describe these example meals. This site does not place orders or save your choices.</p>
+      <p>Images are food-type illustrations, not dish photographs. <a href="meals.html">Browse all meals</a> or <a href="about.html#sources">read the sources and limitations</a>.</p>
     </section>
   </main>
 
@@ -80,6 +82,7 @@
   </footer>
   <!-- 顺序很重要：先准备数据，再运行读取数据的推荐逻辑。 -->
   <script src="meals.js"></script>
+  <script src="meal-card.js"></script>
   <script src="pick.js"></script>
 </body>
 </html>

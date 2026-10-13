@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn who What to Eat is for, how suggestions are selected, and how its example data and illustrations were made.">
+  <title>About | What to Eat</title>
+  <link rel="stylesheet" href="media.css">
+</head>
+<body>
+  <a href="#main-content">Skip to main content</a>
+  <header>
+    <p><strong>What to Eat</strong> — A little help with lunch.</p>
+    <nav aria-label="Main navigation"><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pick.html">Pick a Meal</a></li>
+      <li><a href="meals.html">Meal Collection</a></li>
+      <li><a href="about.html" aria-current="page">About</a></li>
+    </ul></nav>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <h1>About What to Eat</h1>
+    <section aria-labelledby="audience-heading">
+      <h2 id="audience-heading">Made for the everyday lunch decision</h2>
+      <p>What to Eat is a student project for people who struggle to choose a meal while keeping a budget and taste preference in mind. It offers a small set of ideas rather than a long restaurant directory.</p>
+      <p>The aim is simple: choose your preferences, see a matching suggestion, and spend less time deciding.</p>
+    </section>
+    <section aria-labelledby="method-heading">
+      <h2 id="method-heading">Filter first, then pick</h2>
+      <p>The picker keeps meals that match both the budget and taste. A meal priced exactly at the budget is included. It then selects one of the remaining meals at random.</p>
+      <p>Every matching meal has the same chance of being selected. Choices can repeat. If there is only one match, that meal will appear each time. If there are no matches, the picker asks you to change the conditions.</p>
+      <p>Changing a preference clears the old suggestion. Refreshing resets the choices. There are no accounts, orders, saved preferences or external food services.</p>
+    </section>
+    <section id="sources" aria-labelledby="sources-heading">
+      <h2 id="sources-heading">Content, illustrations and AI assistance</h2>
+      <p>The twelve meal descriptions, taste labels and example prices were drafted for this coursework with Codex assistance. They are not copied from a restaurant menu and are not live prices. Actual ingredients, spice levels and prices vary by restaurant.</p>
+      <p>The cover and four food-type illustrations were made for this project using HTML/CSS and SVG shapes with Codex assistance. No third-party food photographs are used. Rice dishes share a rice-bowl illustration; noodle dishes share a noodle-bowl illustration. These images indicate a category, not the exact appearance of a dish.</p>
+      <p>Codex also assisted with the code and explanatory notes. The student is responsible for reviewing the work and being able to explain its behavior. This page does not claim that the project was written without assistance.</p>
+    </section>
+    <section aria-labelledby="limits-heading">
+      <h2 id="limits-heading">What this project does not do</h2>
+      <ul>
+        <li>It does not find nearby restaurants, check opening hours, or place orders.</li>
+        <li>It does not verify ingredients, allergies or nutritional information.</li>
+        <li>It does not remember previous choices after a refresh.</li>
+      </ul>
+      <p><a href="pick.html">Try the meal picker</a> or <a href="meals.html">explore the complete menu</a>.</p>
+    </section>
+  </main>
+  <footer><p>What to Eat · A student web project.</p></footer>
+</body>
+</html>
