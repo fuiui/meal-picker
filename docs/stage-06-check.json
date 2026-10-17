@@ -1,0 +1,168 @@
+{
+  "stage": 6,
+  "checks": [
+    {
+      "file": "index.html",
+      "width": 320,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": null,
+      "pickerColumns": null,
+      "controlsLarge": true,
+      "images": true
+    },
+    {
+      "file": "pick.html",
+      "width": 320,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": null,
+      "pickerColumns": 1,
+      "controlsLarge": true,
+      "images": true
+    },
+    {
+      "file": "meals.html",
+      "width": 320,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": 1,
+      "pickerColumns": null,
+      "controlsLarge": true,
+      "images": true
+    },
+    {
+      "file": "about.html",
+      "width": 320,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": null,
+      "pickerColumns": null,
+      "controlsLarge": true,
+      "images": true
+    },
+    {
+      "file": "index.html",
+      "width": 375,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": null,
+      "pickerColumns": null,
+      "controlsLarge": true,
+      "images": true
+    },
+    {
+      "file": "pick.html",
+      "width": 375,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": null,
+      "pickerColumns": 1,
+      "controlsLarge": true,
+      "images": true
+    },
+    {
+      "file": "meals.html",
+      "width": 375,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": 1,
+      "pickerColumns": null,
+      "controlsLarge": true,
+      "images": true
+    },
+    {
+      "file": "about.html",
+      "width": 375,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": null,
+      "pickerColumns": null,
+      "controlsLarge": true,
+      "images": true
+    },
+    {
+      "file": "index.html",
+      "width": 768,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": null,
+      "pickerColumns": null,
+      "controlsLarge": true,
+      "images": true
+    },
+    {
+      "file": "pick.html",
+      "width": 768,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": null,
+      "pickerColumns": 2,
+      "controlsLarge": true,
+      "images": true
+    },
+    {
+      "file": "meals.html",
+      "width": 768,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": 2,
+      "pickerColumns": null,
+      "controlsLarge": true,
+      "images": true
+    },
+    {
+      "file": "about.html",
+      "width": 768,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": null,
+      "pickerColumns": null,
+      "controlsLarge": true,
+      "images": true
+    },
+    {
+      "file": "index.html",
+      "width": 1440,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": null,
+      "pickerColumns": null,
+      "controlsLarge": true,
+      "images": true
+    },
+    {
+      "file": "pick.html",
+      "width": 1440,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": null,
+      "pickerColumns": 2,
+      "controlsLarge": true,
+      "images": true
+    },
+    {
+      "file": "meals.html",
+      "width": 1440,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": 3,
+      "pickerColumns": null,
+      "controlsLarge": true,
+      "images": true
+    },
+    {
+      "file": "about.html",
+      "width": 1440,
+      "overflow": false,
+      "background": "rgb(247, 243, 232)",
+      "gridColumns": null,
+      "pickerColumns": null,
+      "controlsLarge": true,
+      "images": true
+    }
+  ],
+  "keyboardSkipAndSubmit": true,
+  "focusVisible": true,
+  "browserErrors": []
+}

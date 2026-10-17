@@ -1,0 +1,106 @@
+/* 全站共用的视觉变量：只改这里，就能统一调整配色。 */
+:root {
+  --paper: #f7f3e8;
+  --surface: #fffdf7;
+  --ink: #193f35;
+  --muted: #52665b;
+  --accent: #ba4327;
+  --line: #cccfc0;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.65 'Segoe UI', Arial, sans-serif; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: var(--accent); text-underline-offset: 4px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+body > a:first-child { position: absolute; top: -100px; left: 20px; z-index: 10; padding: 12px 20px; background: var(--surface); }
+body > a:first-child:focus { top: 12px; }
+body > header, main, body > footer { width: min(1120px, calc(100% - 64px)); margin-inline: auto; }
+body > header { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding-block: 25px; border-bottom: 1px solid var(--line); }
+header > p { margin: 0; }
+header strong { font: 700 26px/1.2 Georgia, serif; letter-spacing: -1px; }
+nav ul { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; list-style: none; }
+nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 13px; color: var(--ink); font-size: 14px; font-weight: 600; text-decoration: none; border-radius: 6px; }
+nav a:hover { background: #e9ebdf; }
+nav a[aria-current='page'] { background: var(--ink); color: var(--surface); }
+main { padding-block: 56px 64px; }
+h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; line-height: 1.15; }
+h1 { font-size: clamp(38px, 5.2vw, 66px); letter-spacing: -2px; margin: 0 0 22px; max-width: 850px; }
+h2 { font-size: clamp(27px, 3vw, 36px); margin: 0 0 20px; letter-spacing: -.7px; }
+h3 { font-size: 26px; margin: 0 0 12px; }
+p { margin: 0 0 20px; }
+main > p { max-width: 740px; }
+main > section { margin-top: 48px; }
+body > footer { border-top: 1px solid var(--line); padding-block: 24px; color: var(--muted); font-size: 14px; }
+body > footer p { margin: 0; }
+.button, button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 23px; border: 1px solid var(--accent); border-radius: 6px; background: var(--accent); color: white; font: 600 16px/1.4 'Segoe UI', Arial, sans-serif; text-decoration: none; cursor: pointer; }
+.button:hover, button:hover { background: #96351e; border-color: #96351e; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+.actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px 24px; margin-top: 28px; }
+.hero { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 40px; margin-top: 0; }
+.hero h1 { max-width: 620px; font-size: clamp(44px, 5.7vw, 76px); }
+.hero > img { width: 100%; }
+.hero .intro { color: var(--muted); font-size: 20px; }
+.home main > section:not(.hero) { border-top: 1px solid var(--line); padding-top: 36px; }
+#steps-heading + ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding: 0; list-style-position: inside; }
+#steps-heading + ol li { padding-right: 18px; }
+#steps-heading + ol strong { display: block; margin-block: 6px; }
+.home #expect-heading ~ p { max-width: 760px; }
+/* 推荐页用 Grid 分成选择区和结果区，原有 JS 元素 id 保持不变。 */
+.picker-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 28px; align-items: stretch; margin-top: 32px; }
+form { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 28px; }
+fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+legend { font: 28px/1.2 Georgia, serif; padding: 0 0 24px; }
+label { display: inline-block; margin-bottom: 9px; font-weight: 600; }
+select { display: block; width: 100%; min-height: 48px; padding: 10px 14px; border: 1px solid #899b8b; border-radius: 6px; color: var(--ink); background: var(--surface); font: inherit; }
+#budget-help { color: var(--muted); font-size: 14px; margin-top: -8px; }
+form button { width: 100%; }
+.result-panel { min-width: 0; border: 1px solid var(--line); background: #e9eddf; padding: 28px; border-radius: 12px; }
+.result-panel h2 { font-size: 28px; margin-bottom: 10px; }
+#candidate-count { font-size: 14px; color: var(--muted); }
+#meal-result { min-height: 260px; }
+#meal-result > article img { width: min(100%, 340px); margin-block: 14px; border-radius: 8px; }
+#meal-result article p { margin-bottom: 12px; }
+.picker main > section { max-width: 800px; }
+/* 自适应卡片：大屏三列，中屏两列，手机一列。 */
+#meal-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-block: 32px; }
+#meal-list article { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px; }
+#meal-list article h2 { font-size: 26px; min-height: 60px; margin-bottom: 14px; }
+#meal-list article img { width: 100%; border-radius: 8px; margin-bottom: 20px; }
+#meal-list article p { font-size: 15px; margin-bottom: 12px; }
+#meal-list article p:first-of-type { font-weight: 600; }
+#meal-list article p:last-child { color: var(--muted); margin-bottom: 0; }
+.about main { max-width: 820px; }
+.about section { border-top: 1px solid var(--line); padding-top: 30px; }
+.about li { margin-bottom: 12px; }
+#sources { scroll-margin-top: 24px; }
+@media (max-width: 900px) {
+  body > header { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .hero { gap: 20px; }
+  #meal-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  body > header, main, body > footer { width: calc(100% - 32px); }
+  body > header { padding-block: 20px; }
+  nav { width: 100%; }
+  nav ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  nav a { width: 100%; justify-content: center; padding-inline: 8px; }
+  main { padding-block: 36px 44px; }
+  .hero, .picker-layout, #meal-list, #steps-heading + ol { grid-template-columns: 1fr; }
+  .hero { gap: 24px; }
+  .hero > img { max-width: 420px; justify-self: center; }
+  .hero h1 { letter-spacing: -1.5px; }
+  #steps-heading + ol { gap: 20px; }
+  .actions { align-items: stretch; flex-direction: column; }
+  .actions > a { text-align: center; }
+  form, .result-panel { padding: 22px; }
+  #meal-result { min-height: 160px; }
+  #meal-list article h2 { min-height: 0; }
+}
+/* 不添加闪动或持续动画；系统减少动态效果偏好也无需额外适应。 */
+@media print {
+  body { background: white; color: black; }
+  body > header, main, body > footer { width: 100%; }
+  nav, body > a:first-child { display: none; }
+  article { break-inside: avoid; }
+}

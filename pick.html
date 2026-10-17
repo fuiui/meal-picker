@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Choose your budget and taste, then get a random suggestion from twelve example meals.">
   <title>Pick a Meal | What to Eat</title>
-  <link rel="stylesheet" href="media.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="picker">
   <a href="#main-content">Skip to main content</a>
 
   <header>
-    <p><strong>What to Eat</strong> — A little help with lunch.</p>
+    <p><strong>What to Eat</strong></p>
     <!-- 四个真实页面使用相对链接，移动整个文件夹后也能访问。 -->
     <nav aria-label="Main navigation">
       <ul>
@@ -30,6 +30,7 @@
     <p>Choose your preferences, then pick a meal. Try again whenever you want another idea.</p>
     <noscript><p>This meal picker needs JavaScript. Enable JavaScript to use the recommendation button.</p></noscript>
 
+    <div class="picker-layout">
     <!-- form 收集选择；label 的 for 对应控件 id，点击标签也能聚焦。 -->
     <form id="meal-form" aria-describedby="price-note">
       <fieldset>
@@ -56,7 +57,7 @@
       </fieldset>
     </form>
 
-    <section aria-labelledby="result-heading">
+    <section class="result-panel" aria-labelledby="result-heading">
       <h2 id="result-heading">Your meal suggestion</h2>
       <p id="candidate-count" role="status"></p>
       <!-- JavaScript 更新结果；aria-live 让辅助阅读工具获知变化。 -->
@@ -64,6 +65,8 @@
         <p>No meal selected. Enable JavaScript if the recommendation button remains unavailable.</p>
       </div>
     </section>
+
+    </div>
 
     <section aria-labelledby="how-heading">
       <h2 id="how-heading">How it works</h2>

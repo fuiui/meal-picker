@@ -2,14 +2,15 @@
 
 这是 Web Technologies 个人项目，独立于旁边的课堂网站 `my-site`。
 
-当前进度：**第五部分已完成，四页内容和导航已连通**。包含 12 道示例食物、筛选与随机推荐、空结果处理、候选数量和食物类型示意图；最终视觉样式尚未完成。前五部分已按阶段保存到本地 Git。未设置远程仓库、未上传。
+当前进度：**第六部分已完成，四页已统一样式并适配手机宽度**。包含 12 道示例食物、筛选与随机推荐、空结果处理、候选数量和食物类型示意图。前六部分已按阶段保存到本地 Git。未设置远程仓库、未上传。
 
 ## 查看本阶段结果
 
 - 打开 `index.html` 从首页进入四页网站。
+- 阅读 `docs/06-styling.md` 学习布局、响应式规则和键盘焦点；检查结果在 `docs/stage-06-check.json`。
 - 阅读 `docs/05-four-pages.md` 学习四页导航、共用菜单和卡片函数；验证结果在 `docs/stage-05-check.json`。
 
-- 打开 `pick.html` 使用推荐功能；当前仍使用浏览器默认样式。
+- 打开 `pick.html` 使用推荐功能；四页均使用 `style.css`。
 - 阅读 `docs/04-recommendation.md` 学习筛选和随机逻辑；验证结果在 `docs/stage-04-check.json`。
 - 阅读 `docs/03-html-structure.md` 对照学习标签；验证结果在 `docs/stage-03-check.json`。
 
