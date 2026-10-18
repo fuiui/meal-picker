@@ -1,0 +1,90 @@
+{
+  "stage": 7,
+  "localHTTPPages": [
+    "index.html",
+    "pick.html",
+    "meals.html",
+    "about.html"
+  ],
+  "iconLinks": true,
+  "partialShareMetadata": true,
+  "liveShareURLsPending": true,
+  "originalCoverPreserved": true,
+  "files": [
+    {
+      "name": "app-icon.png",
+      "bytes": 2623
+    },
+    {
+      "name": "cover.jpg",
+      "bytes": 50232
+    },
+    {
+      "name": "desktop.png",
+      "bytes": 105486
+    },
+    {
+      "name": "favicon.png",
+      "bytes": 558
+    },
+    {
+      "name": "mobile.png",
+      "bytes": 40563
+    }
+  ],
+  "browserErrors": [],
+  "httpErrors": [],
+  "notVerified": [
+    "Public hosting",
+    "Social sharing preview",
+    "Physical phone",
+    "Course submission"
+  ],
+  "imageValidation": [
+    {
+      "file": "cover.jpg",
+      "size": [
+        1200,
+        630
+      ],
+      "format": "JPEG",
+      "bytes": 50232
+    },
+    {
+      "file": "desktop.png",
+      "size": [
+        1920,
+        1080
+      ],
+      "format": "PNG",
+      "bytes": 105486
+    },
+    {
+      "file": "mobile.png",
+      "size": [
+        375,
+        812
+      ],
+      "format": "PNG",
+      "bytes": 40563
+    },
+    {
+      "file": "app-icon.png",
+      "size": [
+        180,
+        180
+      ],
+      "format": "PNG",
+      "bytes": 2623
+    },
+    {
+      "file": "favicon.png",
+      "size": [
+        32,
+        32
+      ],
+      "format": "PNG",
+      "bytes": 558
+    }
+  ]
+}

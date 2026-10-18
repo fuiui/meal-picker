@@ -2,11 +2,14 @@
 
 这是 Web Technologies 个人项目，独立于旁边的课堂网站 `my-site`。
 
-当前进度：**第六部分已完成，四页已统一样式并适配手机宽度**。包含 12 道示例食物、筛选与随机推荐、空结果处理、候选数量和食物类型示意图。前六部分已按阶段保存到本地 Git。未设置远程仓库、未上传。
+当前进度：**第七部分的本地交付材料已准备并保存到本地 Git**。四页网站、推荐功能、响应式样式、图标、五张提交图片、英文项目说明和答辩练习均已准备。未设置远程仓库、未上传或部署；依赖上线地址的 og:url、og:image 和正式课程平台提交尚待完成。
 
 ## 查看本阶段结果
 
 - 打开 `index.html` 从首页进入四页网站。
+- `submission/` 内含五张提交用图片；`docs/submission-text.md` 是英文项目条目文案。
+- `docs/presentation-practice.md` 提供三分钟演示路线和代码问答练习。
+- `docs/07-delivery.md` 说明本地交付状态与上线待办；检查记录见 `docs/stage-07-check.json`。
 - 阅读 `docs/06-styling.md` 学习布局、响应式规则和键盘焦点；检查结果在 `docs/stage-06-check.json`。
 - 阅读 `docs/05-four-pages.md` 学习四页导航、共用菜单和卡片函数；验证结果在 `docs/stage-05-check.json`。
 
