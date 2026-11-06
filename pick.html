@@ -4,13 +4,13 @@
   <!-- UTF-8 支持中文和货币符号；viewport 让手机使用实际屏幕宽度。 -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Choose your budget and taste, then get a random suggestion from twelve example meals.">
+  <meta name="description" content="Filter twenty-four illustrated meals by budget, taste, food type and mealtime, then get a random suggestion.">
   <title>Pick a Meal | What to Eat</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta property="og:title" content="Pick a Meal | What to Eat">
-  <meta property="og:description" content="Choose your budget and taste, then get a random suggestion from twelve example meals.">
+  <meta property="og:description" content="Filter twenty-four illustrated meals by budget, taste, food type and mealtime, then get a random suggestion.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://fuiui.github.io/meal-picker/pick.html">
@@ -34,7 +34,7 @@
 
   <main id="main-content" tabindex="-1">
     <h1>Pick a Meal</h1>
-    <p>One less decision. Start with your budget and taste.</p>
+    <p>One less decision. Choose your budget, taste, food type and mealtime.</p>
     <p>Choose your preferences, then pick a meal. Try again whenever you want another idea.</p>
     <noscript><p>This meal picker needs JavaScript. Enable JavaScript to use the recommendation button.</p></noscript>
 
@@ -60,8 +60,11 @@
             <option value="spicy">Spicy</option>
           </select>
         </p>
+        <p><label for="category">Food type</label><select id="category" name="category"><option value="any">Any food type</option><option value="rice">Rice &amp; congee</option><option value="noodles">Noodles</option><option value="dumplings">Dumplings &amp; buns</option><option value="hotpot">Hotpot &amp; mixed pots</option><option value="light">Light meals</option><option value="bakery">Bread &amp; wraps</option></select></p>
+        <p><label for="occasion">Mealtime</label><select id="occasion" name="occasion"><option value="any">Any mealtime</option><option value="breakfast">Breakfast</option><option value="lunch">Lunch</option><option value="dinner">Dinner</option></select></p>
         <!-- 脚本初始化成功后才启用，避免 JavaScript 不可用时误提交。 -->
         <button id="pick-button" type="submit" disabled>Pick a meal</button>
+        <button id="reset-filters" class="secondary" type="button">Reset filters</button>
       </fieldset>
     </form>
 
@@ -79,12 +82,12 @@
     <section aria-labelledby="how-heading">
       <h2 id="how-heading">How it works</h2>
       <ol>
-        <li>Choose your budget and taste.</li>
+        <li>Choose your budget, taste, food type and mealtime. Leave any filter open if you prefer.</li>
         <li>Pick a meal from the matching options.</li>
         <li>Try again if you would like another idea. Random choices may repeat.</li>
       </ol>
       <p id="price-note">Prices are examples for this project, not current restaurant prices. Taste labels describe these example meals. This site does not place orders or save your choices.</p>
-      <p>Images are food-type illustrations, not dish photographs. <a href="meals.html">Browse all meals</a> or <a href="about.html#sources">read the sources and limitations</a>.</p>
+      <p>Mealtimes are suggestions. Images are dish illustrations, not photographs. <a href="meals.html">Browse all meals</a> or <a href="about.html#sources">read the sources and limitations</a>.</p>
     </section>
   </main>
 

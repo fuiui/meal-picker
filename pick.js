@@ -2,18 +2,22 @@
 const form = document.getElementById('meal-form');
 const budgetSelect = document.getElementById('budget');
 const tasteSelect = document.getElementById('taste');
+const categorySelect = document.getElementById('category');
+const occasionSelect = document.getElementById('occasion');
 const pickButton = document.getElementById('pick-button');
 const result = document.getElementById('meal-result');
 const count = document.getElementById('candidate-count');
 
-// 2. 同时满足预算和口味才保留。select 的值是字符串，价格需要转为数字。
+// 2. 同时满足四个筛选条件才保留。select 的值是字符串，价格需要转为数字。
 function getCandidates() {
   const budget = budgetSelect.value;
   const taste = tasteSelect.value;
   return meals.filter(function (meal) {
     const withinBudget = budget === 'any' || meal.price <= Number(budget);
     const matchesTaste = taste === 'any' || meal.taste === taste;
-    return withinBudget && matchesTaste;
+    const matchesCategory = categorySelect.value === 'any' || meal.category === categorySelect.value;
+    const matchesOccasion = occasionSelect.value === 'any' || meal.occasions.includes(occasionSelect.value);
+    return withinBudget && matchesTaste && matchesCategory && matchesOccasion;
   });
 }
 
@@ -22,7 +26,7 @@ function resetResult() {
   const candidates = getCandidates();
   count.textContent = candidates.length + ' matching meal(s).';
   result.textContent = candidates.length === 0
-    ? 'No meals match these choices. Try a higher budget or a different taste.'
+    ? 'No meals match these choices. Try any food type or mealtime, or reset the filters.'
     : 'Choose Pick a meal to get a suggestion.';
   pickButton.textContent = 'Pick a meal';
 }
@@ -47,6 +51,12 @@ form.addEventListener('submit', function (event) {
 
 budgetSelect.addEventListener('change', resetResult);
 tasteSelect.addEventListener('change', resetResult);
+categorySelect.addEventListener('change', resetResult);
+occasionSelect.addEventListener('change', resetResult);
+document.getElementById('reset-filters').addEventListener('click', function () {
+  form.reset();
+  resetResult();
+});
 
 // 5. 初始化：明确恢复默认值；初始化成功后才启用按钮。
 form.reset();

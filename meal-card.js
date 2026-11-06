@@ -5,6 +5,9 @@ function createMealCard(meal, headingTag) {
   const name = document.createElement(headingTag);
   const details = document.createElement('p');
   const description = document.createElement('p');
+  const tags = document.createElement('p');
+  tags.className = 'meal-tags';
+  tags.textContent = categoryLabels[meal.category] + ' · ' + meal.occasions.map(function (occasion) { return occasionLabels[occasion]; }).join(' / ');
   image.src = meal.image;
   image.alt = meal.imageAlt;
   image.width = 280;
@@ -13,6 +16,6 @@ function createMealCard(meal, headingTag) {
   details.textContent = 'Example price: ¥' + meal.price + ' · ' + (meal.taste === 'spicy' ? 'Spicy' : 'Non-spicy');
   description.textContent = meal.description;
   // 用纯文字赋值，不把食物数据当 HTML 执行。
-  card.append(name, image, details, description);
+  card.append(name, image, details, tags, description);
   return card;
 }

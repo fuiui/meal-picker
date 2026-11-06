@@ -55,6 +55,15 @@ label { display: inline-block; margin-bottom: 9px; font-weight: 600; }
 select { display: block; width: 100%; min-height: 48px; padding: 10px 14px; border: 1px solid #899b8b; border-radius: 6px; color: var(--ink); background: var(--surface); font: inherit; }
 #budget-help { color: var(--muted); font-size: 14px; margin-top: -8px; }
 form button { width: 100%; }
+.secondary { background: transparent; color: var(--ink); border-color: var(--line); margin-top: 12px; }
+.secondary:hover { background: #e9ebdf; border-color: var(--ink); }
+.browse-filters { display: grid; grid-template-columns: 1fr 1fr auto; align-items: end; gap: 20px; margin-block: 28px 16px; }
+.browse-filters p { margin: 0; }
+.browse-filters button { margin: 0; }
+.meal-tags { color: var(--muted); font-size: 14px; }
+.meal-preview { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.meal-preview a { font-weight: 600; }
+.meal-preview img { width: 100%; border-radius: 12px; margin-bottom: 12px; }
 .result-panel { min-width: 0; border: 1px solid var(--line); background: #e9eddf; padding: 28px; border-radius: 12px; }
 .result-panel h2 { font-size: 28px; margin-bottom: 10px; }
 #candidate-count { font-size: 14px; color: var(--muted); }
@@ -87,6 +96,7 @@ form button { width: 100%; }
   nav a { width: 100%; justify-content: center; padding-inline: 8px; }
   main { padding-block: 36px 44px; }
   .hero, .picker-layout, #meal-list, #steps-heading + ol { grid-template-columns: 1fr; }
+  .browse-filters, .meal-preview { grid-template-columns: 1fr; }
   .hero { gap: 24px; }
   .hero > img { max-width: 420px; justify-self: center; }
   .hero h1 { letter-spacing: -1.5px; }
